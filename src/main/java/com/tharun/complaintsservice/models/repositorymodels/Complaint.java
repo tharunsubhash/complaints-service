@@ -16,7 +16,7 @@ import java.io.File;
 @Builder
 @AllArgsConstructor
 @Table(name = "complaintsregistry")
-public class ComplaintsRegistry {
+public class Complaint {
     @Id
     @Column(name = "ComplaintId")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -48,6 +48,9 @@ public class ComplaintsRegistry {
     @Column(name="Status")
     public String status;
 
-    @Column(name="AssignTo")
+    @Column(name="AssignedTo")
     public int agentId;
+
+    @Column(name="Priority")
+    public String priority;
 }

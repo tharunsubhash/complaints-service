@@ -15,7 +15,7 @@ import javax.persistence.*;
 @Builder
 @AllArgsConstructor
 @Table(name = "usersregistry")
-public class UserRegistry {
+public class User {
     @Id
     @Column(name = "UserId")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
