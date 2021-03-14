@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
@@ -15,14 +16,11 @@ import javax.persistence.*;
 @Builder
 @AllArgsConstructor
 @Table(name = "usersregistry")
-public class User {
+public class User extends SecurityProperties.User {
     @Id
     @Column(name = "UserId")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    public String userId;
-
-    @Column(name = "UserName")
-    public String userName;
+    public int userId;
 
     @Column(name = "EmailId")
     public String emailId;
